@@ -1,0 +1,31 @@
+[project]
+name = "dspy-textual-tui"
+version = "0.1.0"
+description = "Textual TUI wrapper for a minimal DSPy agent"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "You"}]
+license = {text = "MIT"}
+
+[project.dependencies]
+dspy-ai = "*"
+textual = "*"
+loguru = "*"
+python-dotenv = "*"
+
+[tool.uv]
+# uv will read this to resolve and create the environment
+
+[tool.ruff]
+line-length = 100
+
+[tool.mypy]
+python_version = "3.10"
+warn_unused_configs = true
+strict = true
+
+[tool.pytest.ini_options]
+addopts = "-q"
+
+[tool.bandit]
+targets = ["src"]
