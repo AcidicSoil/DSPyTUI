@@ -1,1 +1,0 @@
-aicm = "!f(){ msg=$(git diff --cached | gemini --model gemini-2.5-pro --prompt 'Generate a concise Conventional Commit.'); [ -z \"$msg\" ] && { echo 'Empty message'; exit 1; }; git commit -m \"$msg\"; }; f"
